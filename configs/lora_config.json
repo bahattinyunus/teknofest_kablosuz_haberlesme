@@ -1,0 +1,20 @@
+{
+    "project": "Wireless-Architect",
+    "module": "SX1276",
+    "description": "Standard LoRa configuration for stable long-range communication.",
+    "parameters": {
+        "frequency_mhz": 433.0,
+        "spreading_factor": 7,
+        "bandwidth_khz": 125.0,
+        "coding_rate": "4/5",
+        "tx_power_dbm": 14,
+        "preamble_length": 8,
+        "implicit_header": false,
+        "crc_enabled": true
+    },
+    "notes": {
+        "sf7_125khz": "Balance between speed and range.",
+        "sf12_125khz": "Maximum range, minimum data rate.",
+        "freq_bands": [433, 868, 915]
+    }
+}
