@@ -121,3 +121,8 @@ Bir IT Architect her zaman yeni fikirlere açıktır. Eğer daha verimli bir mod
 © 2025 Bahattin Yunus Çetin. Of, Trabzon.
 
 *Haberleşme sadece bir bağlantı değil, bir mimari eserdir.*
+---
+---
+<p align="center">
+  <img src="https://img.shields.io/badge/Powered%20By-TEKNOFEST-red?style=for-the-badge&logo=rocket&logoColor=white" alt="TEKNOFEST Support">
+</p>
