@@ -1,0 +1,44 @@
+<svg width="1000" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020024;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#090979;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Abstract Waves -->
+  <path d="M0,150 Q250,50 500,150 T1000,150" fill="none" stroke="#00d4ff" stroke-width="2" stroke-opacity="0.5"/>
+  <path d="M0,150 Q250,250 500,150 T1000,150" fill="none" stroke="#ff00ff" stroke-width="2" stroke-opacity="0.5"/>
+  
+  <path d="M0,150 Q125,100 250,150 T500,150 T750,150 T1000,150" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Central HUD Circle -->
+  <circle cx="500" cy="150" r="80" fill="none" stroke="#00d4ff" stroke-width="2" stroke-dasharray="10,5" filter="url(#glow)"/>
+  <circle cx="500" cy="150" r="60" fill="none" stroke="#ff00ff" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Text -->
+  <text x="500" y="140" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="url(#glow)" letter-spacing="2">WIRELESS</text>
+  <text x="500" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="normal" fill="#00d4ff" text-anchor="middle" letter-spacing="8">ARCHITECT</text>
+
+  <!-- Tech Accents -->
+  <rect x="100" y="145" width="20" height="10" fill="#00d4ff" opacity="0.8"/>
+  <rect x="880" y="145" width="20" height="10" fill="#00d4ff" opacity="0.8"/>
+  <path d="M420,150 L380,150" stroke="#fff" stroke-width="2"/>
+  <path d="M580,150 L620,150" stroke="#fff" stroke-width="2"/>
+
+</svg>

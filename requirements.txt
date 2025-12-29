@@ -1,5 +1,3 @@
 # Wireless-Architect Requirements
 # These tools use standard libraries primarily, but extensions may require these:
-argparse
-math
-json
+colorama
