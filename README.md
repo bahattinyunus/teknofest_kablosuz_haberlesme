@@ -23,7 +23,7 @@ TEKNOFEST 2025 sahasına indiğimizde, hedefimiz sadece veri göndermek değil; 
 
 ## 🚀 Hazırlayan Hakkında
 **Bahattin Yunus Çetin** | *IT Architect Candidate*
-Trabzon/Of doğumlu, İT mimarisi ve haberleşme teknolojileri üzerine yoğunlaşan bir teknoloji tutkunu. TEKNOFEST projelerinde kritik önem taşıyan Veri İletim Katmanı'nın güvenilirliğini ve performansını optimize etmeye odaklanır.
+İT mimarisi ve haberleşme teknolojileri üzerine yoğunlaşan bir teknoloji tutkunu. TEKNOFEST projelerinde kritik önem taşıyan Veri İletim Katmanı'nın güvenilirliğini ve performansını optimize etmeye odaklanır.
 
 *   **LinkedIn**: [linkedin.com/in/bahattinyunus](https://www.linkedin.com/in/bahattinyunus/)
 *   **Github**: [github.com/bahattinyunus](https://github.com/bahattinyunus)
