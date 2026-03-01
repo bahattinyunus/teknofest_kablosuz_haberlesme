@@ -8,6 +8,16 @@
 ![License](https://img.shields.io/badge/Lisans-MIT-green.svg)
 
 > **Wireless-Architect**, bir İT Mimarı'nın bakış açısıyla kablosuz ağlar, veri linkleri ve kesintisiz iletişim altyapıları üzerine kurgulanan kapsamlı bir ekosistemdir.
+> 
+> *“Haberleşmeyi sadece bir bağlantı değil, bir mimari eser olarak görüyoruz.”*
+
+---
+
+## 🌌 Vizyon ve Hikaye (Lore & Vision)
+
+Bugünün dünyasında veri, modern savunma ve sivil sistemlerin can damarıdır. Ancak bu damarlar; karıştırma (jamming), gürültü (noise) ve fiziksel engellerle sürekli tehdit altındadır. **Wireless-Architect**, bu tehditlere karşı sadece bir "radyo vericisi" değil, **kendi kendine karar verebilen, spektrumu analiz eden ve en zorlu koşullarda dahi kopmayan dijital otoyollar** inşa etme vizyonuyla doğdu.
+
+TEKNOFEST 2025 sahasına indiğimizde, hedefimiz sadece veri göndermek değil; o veriyi bir mimar titizliğiyle, güvenli ve zeki bir stack üzerinden hedefe ulaştırmaktır.
 
 ---
 
@@ -31,6 +41,25 @@ Sinyalin "hava" üzerindeki formudur.
     *   **OFDM:** Geniş bant uygulamalarında (WiFi/5G) verinin alt taşıyıcılara bölünerek yansımalara karşı direnç kazanması.
 *   **SDR (Software Defined Radio):** Donanımsal bağımlılığı minimize eden, sinyali yazılımla işleyen (DSP) üniteler.
 
+---
+
+## 🏗️ Yazılım Mimarisi (Software Architecture)
+
+Sistemimiz, modüler bir yapıda olup matematiksel modellerden gerçek zamanlı simülasyonlara uzanan geniş bir yelpazeyi kapsar:
+
+```mermaid
+graph LR
+    A[Matematiksel Modeller] --> B{Simülasyon Katmanı}
+    B --> C[Link Budget Calc]
+    B --> D[Signal Coverage Sim]
+    B --> E[MAC Layer Sim]
+    C --> F[Saha Uygulaması]
+    D --> F
+    E --> F
+    F --> G[Siber Güvenlik & Anti-Jamming]
+```
+
+---
 ### 2. Veri Bağı ve MAC Katmanı (Data Link Layer)
 Kimin ne zaman konuşacağını belirleyen trafik polisidir.
 *   **CSMA/CA:** "Dinle ve Konuş" protokolü.
@@ -178,7 +207,38 @@ Bu repository, sadece kod değil; bir öğrenme ve uygulama ekosistemidir. Dosya
 *   **[CI/CD Workflow](.github/workflows/ci.yml)**: GitHub Actions ile her push'ta otomatikleşen test süreci.
 
 ### 💼 Girişimcilik ve Strateji (`docs/`)
-*   **[Business Strategy](docs/business_strategy.md)**: Teknofest'ten Startup'a dönüşüm planı.
+*   **[Business Strategy](docs/business_strategy.md)**: Projenin Teknofest'ten Startup'a dönüşüm planı.
+
+---
+
+## 🖥️ Terminal Simülasyonu (Tools in Action)
+
+Simülatörlerimizi çalıştırdığınızda aşağıdaki gibi bir çıktı alırsınız:
+
+```text
+$ python scripts/signal_coverage_sim.py --size 800 --freq 433
+--- Signal Coverage Simulation (800x800 meters) ---
+Freq: 433.0 MHz, Ptx: 14.0 dBm, n: 2.5
+--------------------------------------------------
+🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 🟢 
+🟢 🟢 🟢 🟢 🟢 🟡 🔴 🔴 🔴 
+🟢 🟢 🟡 🟡 🔴 🔴 💀 💀 💀 
+🟢 🟡 🔴 🔴 💀 💀 💀 💀 💀 
+```
+
+> [!TIP]
+> **Hızlı Başlangıç:** `scripts/` klasöründeki araçları `--help` parametresiyle çalıştırarak tüm opsiyonları görebilirsiniz.
+
+---
+
+## 📖 Hızlı Bakış: RF Sözlüğü (Glossary)
+
+| Terim | Tanım | Önem Derecesi |
+| :--- | :--- | :---: |
+| **RSSI** | Alınan Sinyal Gücü Göstergesi. | ⭐⭐⭐ |
+| **SNR** | Sinyal-Gürültü Oranı. LoRa için < 0 olabilir. | ⭐⭐⭐ |
+| **DWELL Time** | Bir frekansta kalma süresi (FHSS için kritik). | ⭐⭐ |
+| **Multipath** | Sinyalin engellerden yansıyarak farklı yollardan gelmesi. | ⭐⭐ |
 
 ---
 
