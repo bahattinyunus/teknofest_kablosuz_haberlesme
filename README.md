@@ -161,6 +161,27 @@ Analizler sonucunda "Wireless-Architect" projesinin evrileceği vizyon:
 
 ---
 
+## 📂 Proje Yapısı ve Navigasyon (Project Architecture)
+
+Bu repository, sadece kod değil; bir öğrenme ve uygulama ekosistemidir. Dosyalar aşağıda belirtilen mantıksal düzlemde organize edilmiştir:
+
+### 📖 Teknik Dökümantasyon (`docs/`)
+*   **[Mathematical Models](docs/mathematical_models.md)**: Friis, Shannon ve Link Budget'ın teorik temelleri.
+*   **[Advanced PHY Layer](docs/advanced_phy_layer.md)**: OFDM, MIMO ve CSS (LoRa) gibi ileri seviye fiziksel katman teknolojileri.
+*   **[Antenna Guide](docs/antenna_guide.md)**: Anten tipleri, kazançları ve polarizasyon stratejileri.
+*   **[Interference Mitigation](docs/interference_mitigation.md)**: Jamming ve gürültüyle başa çıkma rehberi.
+
+### 🧪 Simülasyon Araçları (`scripts/`)
+*   **[Signal Coverage Sim](scripts/signal_coverage_sim.py)**: Mesafe ve çevresel faktörlere göre RF kapsama alanı simülatörü.
+*   **[MAC Layer Sim](scripts/mac_layer_sim.py)**: TDMA ve CSMA/CA protokollerinin performans (throughput/collision) kıyası.
+*   **[Link Budget Calc](scripts/link_budget.py)**: Teorik menzil ve sinyal gücü hesaplayıcı.
+*   **[RSSI/SNR Guide](scripts/rssi_snr_guide.py)**: Saha verilerini analiz etmek için yardımcı araç.
+
+### 💼 Girişimcilik ve Strateji (`docs/`)
+*   **[Business Strategy](docs/business_strategy.md)**: Projenin Teknofest'ten bir startup'a (MVP, Roadmap, SWOT) dönüşüm planı.
+
+---
+
 ## 🤝 Katkıda Bulunma
 
 Bu proje açık kaynaklıdır ve katkılara açıktır. Lütfen [CONTRIBUTING.md](CONTRIBUTING.md) dosyasını inceleyin.
