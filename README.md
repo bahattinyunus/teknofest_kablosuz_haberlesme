@@ -168,17 +168,29 @@ Bu repository, sadece kod değil; bir öğrenme ve uygulama ekosistemidir. Dosya
 ### 📖 Teknik Dökümantasyon (`docs/`)
 *   **[Mathematical Models](docs/mathematical_models.md)**: Friis, Shannon ve Link Budget'ın teorik temelleri.
 *   **[Advanced PHY Layer](docs/advanced_phy_layer.md)**: OFDM, MIMO ve CSS (LoRa) gibi ileri seviye fiziksel katman teknolojileri.
+*   **[Cybersecurity Guide](docs/cybersecurity_anti_jamming.md)**: RF sistemlerinde şifreleme, FHSS ve anti-jamming stratejileri.
 *   **[Antenna Guide](docs/antenna_guide.md)**: Anten tipleri, kazançları ve polarizasyon stratejileri.
-*   **[Interference Mitigation](docs/interference_mitigation.md)**: Jamming ve gürültüyle başa çıkma rehberi.
 
-### 🧪 Simülasyon Araçları (`scripts/`)
-*   **[Signal Coverage Sim](scripts/signal_coverage_sim.py)**: Mesafe ve çevresel faktörlere göre RF kapsama alanı simülatörü.
-*   **[MAC Layer Sim](scripts/mac_layer_sim.py)**: TDMA ve CSMA/CA protokollerinin performans (throughput/collision) kıyası.
-*   **[Link Budget Calc](scripts/link_budget.py)**: Teorik menzil ve sinyal gücü hesaplayıcı.
-*   **[RSSI/SNR Guide](scripts/rssi_snr_guide.py)**: Saha verilerini analiz etmek için yardımcı araç.
+### 🧪 Simülasyon ve Test (`scripts/` & `tests/`)
+*   **[Signal Coverage Sim](scripts/signal_coverage_sim.py)**: RF kapsama alanı simülatörü.
+*   **[MAC Layer Sim](scripts/mac_layer_sim.py)**: Protokol performans kıyası.
+*   **[Unit Tests](tests/test_simulators.py)**: Simülasyon algoritmaları için otomatik testler (`pytest`).
+*   **[CI/CD Workflow](.github/workflows/ci.yml)**: GitHub Actions ile her push'ta otomatikleşen test süreci.
 
 ### 💼 Girişimcilik ve Strateji (`docs/`)
-*   **[Business Strategy](docs/business_strategy.md)**: Projenin Teknofest'ten bir startup'a (MVP, Roadmap, SWOT) dönüşüm planı.
+*   **[Business Strategy](docs/business_strategy.md)**: Teknofest'ten Startup'a dönüşüm planı.
+
+---
+
+## 🛠️ Kurulum ve Test (Setup & Testing)
+
+```bash
+# Bağımlılıkları yükleyin
+pip install -r requirements.txt
+
+# Simülasyon testlerini çalıştırın
+pytest tests/
+```
 
 ---
 
