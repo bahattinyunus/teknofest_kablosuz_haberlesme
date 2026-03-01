@@ -119,13 +119,43 @@ Aşağıda haberleşme ekosistemine yön veren başlıca yarışmalar ve projemi
 *   **xApp Mimarisinin Kopyalanması:** Modellerin karar alma mekanizmasını, vericiye yük bindirmek yerine "near-RT RIC (Real-Time Controller)" mantığıyla yer istasyonunda çalıştırıp radyoya sadece komut yollamak.
 *   **Açık Kaynak Kod Referansı:** [ITU-AI-ML-in-5G-Challenge](https://github.com/ITU-AI-ML-in-5G-Challenge) organizasyonundaki 150+ O-RAN odaklı kaynak kod.
 
-### 3. TEKNOFEST İçi Diğer Kategoriler ve Çapraz Entegrasyon (Cross-Category Strategies)
-Teknofest Kablosuz Haberleşme kategorisinde fark yaratmak, diğer "ileri sevyie" dron veya otonom araç yarışmalarındaki RF mimarilerini özümsemekten geçer.
-*   **Sürü İHA (Swarm UAV) Haberleşme Topolojileri:** MAVLink/ROS2 (DDS) protokollerinde yüzlerce saniyede veri kaybetmeyen takımların kullandığı C-TDMA (Collision-Free TDMA) logikleri. Veri hattında paket çarpışmasını engelleyen deterministik çoklu erişim yöntemleri referans alınmalıdır.
+### 3. GNU Radio Conference (GRCon) CTF
+**Kapsam:** Yazılım Tabanlı Telsiz (SDR) dünyasının en prestijli etkinliklerinden biridir. Capture The Flag (CTF) formatında, sinyal analizi, protokol tersine mühendisliği (reverse engineering) ve sinyal gizleme (steganography) üzerine zorlu problemler içerir.
+**Öğrenilecek Noktalar:**
+*   **Signal Forensics:** Bilinmeyen bir protokolün (örn: "Not-LoRa") modülasyon tipini, bit hızını ve paket yapısını osiloskop/şelale diyagramı üzerinden analiz ederek çözme becerisi.
+*   **DSP Chain Optimization:** GNU Radio bloklarını kullanarak işlemci yükünü minimize eden, gerçek zamanlı (Real-time) yüksek hızlı veri işleme zincirleri kurma.
+*   **Açık Kaynak Kod Referansı:** [argilo/grcon24](https://github.com/argilo/grcon24) - GRCon 2024 CTF problemleri ve kaynak kodları.
+
+### 4. TEKNOFEST İçi Diğer Kategoriler ve Çapraz Entegrasyon
+*   **Sürü İHA (Swarm UAV):** İHA'ların birbiriyle (Mesh) haberleşmesi, çarpışmadan kaçınma veri linkleri. Özel ağ topolojileri ve ROS2/MAVLink haberleşme uygulamaları en büyük rakiplerin referans kaynağıdır.
 *   **Ulaşımda / Havacılıkta Yapay Zeka Düşük Gecikme (Low-Latency) Aktarımları:** GPS kapatıldığında veya jammer açıldığında, FPV/Telemetri kameralarından gelen yüksek çözünürlüklü verinin, sıkıştırma (H265, AI Compression) yardımıyla çok daha kısıtlı ve kirli bir bant üzerinden yer istasyonuna iletilmesi.
 
+---
+
+## 📊 Teknik Kabiliyet Matrisi (Technical Capability Matrix)
+
+Rakiplerle aramızdaki teknolojik farkı ve odak noktalarımızı aşağıdaki matris üzerinden görebiliriz:
+
+| Özellik | DARPA SC2 | ITU 5G | GRCon CTF | Teknofest (Bizim Hedef) |
+| :--- | :---: | :---: | :---: | :---: |
+| **Yapay Zeka (AI)** | Collaborative RL | Deep Learning (xApp) | Sinyal Forensics | **Hibrit (RL + Sensing)** |
+| **Haberleşme Katmanı** | Dinamik Spektrum | mmWave / Beam | SDR / DSP | **Robust PHY / MAC** |
+| **Donanım Odağı** | USRP X310 | Open RAN / MIMO | Herhangi bir SDR | **LoRa / SDR / ESP32** |
+| **Ana Problem** | Çakışmayı Önlemek | Gecikme / Hız | Sinyali Çözmek | **Menzil / Güvenilirlik** |
+
+---
+
+## 🚀 Stratejik Yol Haritası (Strategic Roadmap)
+
+Analizler sonucunda "Wireless-Architect" projesinin evrileceği vizyon:
+
+1.  **Level 1 (Basic RF):** LoRa/ESP-Now ile temel paket iletimi ve Link Budget hesaplama (Mevcut Durum).
+2.  **Level 2 (Resilient COMM):** FHSS (Frekans Atlama) ve Dinamik Paket Boyutu (Adaptive Payload) ile gürültü direnci oluşturma.
+3.  **Level 3 (AI-Native PHY):** Sinyal kalitesine göre modülasyonu AI ile tahmin eden ve spektrumu otonom tarayan "Cognitive Radio" katmanı.
+4.  **Level 4 (Architect Level):** Çoklu topolojilerin (Star + Mesh) ve hibrit protokollerin tek bir merkezi Mimar (Architect) tarafından yönetildiği kesintisiz eko-sistem.
+
 > **💡 Stratejik Sonuç (Architect's Note):** 
-> *Klasik donanım yarışmacıları frekansı değiştirir; şampiyonlar ise frekansın ne zaman tıkanacağını tahmin eder.* Rakipler genellikle sadece SDR veya transreceiver modüllerinin donanımsal yetenekleri üzerinden strateji kurar (örneğin sadece anten kazancını büyütmek). Bizim ana hedefimiz; Fiziksel Katmanı (PHY), Yapay Zeka destekli hata düzeltme (AI-assisted FEC) ve Akıllı Otonom Yönlendirme algoritmalarıyla donatmak olmalıdır.
+> *Klasik donanım yarışmacıları frekansı değiştirir; şampiyonlar ise frekansın ne zaman tıkanacağını tahmin eder.* Rakipler genellikle sadece SDR veya transreceiver modüllerinin donanımsal yetenekleri üzerinden strateji kurar. Bizim ana hedefimiz; Fiziksel Katmanı (PHY), Yapay Zeka destekli hata düzeltme ve Akıllı Otonom Yönlendirme algoritmalarıyla donatarak bir "Haberleşme Zekası" yaratmaktır.
 
 ---
 
