@@ -196,18 +196,19 @@ Bu repository, sadece kod değil; bir öğrenme ve uygulama ekosistemidir. Dosya
 
 ### 📖 Teknik Dökümantasyon (`docs/`)
 *   **[Mathematical Models](docs/mathematical_models.md)**: Friis, Shannon ve Link Budget'ın teorik temelleri.
-*   **[Advanced PHY Layer](docs/advanced_phy_layer.md)**: OFDM, MIMO ve CSS (LoRa) gibi ileri seviye fiziksel katman teknolojileri.
-*   **[Cybersecurity Guide](docs/cybersecurity_anti_jamming.md)**: RF sistemlerinde şifreleme, FHSS ve anti-jamming stratejileri.
-*   **[Antenna Guide](docs/antenna_guide.md)**: Anten tipleri, kazançları ve polarizasyon stratejileri.
+*   **[Architect Protocol Spec](docs/protocol_specification.md)**: Özel veri paketi tasarımı ve bit-level protokol detayları.
+*   **[Advanced PHY Layer](docs/advanced_phy_layer.md)**: OFDM, MIMO ve CSS (LoRa) teknolojileri.
+*   **[Cybersecurity Guide](docs/cybersecurity_anti_jamming.md)**: Şifreleme ve anti-jamming.
 
-### 🧪 Simülasyon ve Test (`scripts/` & `tests/`)
+### 🧪 Simülasyon, Test ve Görselleştirme
+*   **[GCS Telemetry Mockup](scripts/gui_mockup.py)**: Terminal tabanlı Yer İstasyonu dashboard simülasyonu.
 *   **[Signal Coverage Sim](scripts/signal_coverage_sim.py)**: RF kapsama alanı simülatörü.
-*   **[MAC Layer Sim](scripts/mac_layer_sim.py)**: Protokol performans kıyası.
-*   **[Unit Tests](tests/test_simulators.py)**: Simülasyon algoritmaları için otomatik testler (`pytest`).
-*   **[CI/CD Workflow](.github/workflows/ci.yml)**: GitHub Actions ile her push'ta otomatikleşen test süreci.
+*   **[Unit Tests](tests/test_simulators.py)**: Simülasyon algoritmaları için otomatik testler.
 
-### 💼 Girişimcilik ve Strateji (`docs/`)
-*   **[Business Strategy](docs/business_strategy.md)**: Projenin Teknofest'ten Startup'a dönüşüm planı.
+### 🔌 Donanım ve Saha Stratejisi
+*   **[Hardware Integration](docs/hardware_integration.md)**: SDR ve transreceiver bağlantı rehberi.
+*   **[Jury Presentation Tips](docs/jury_presentation_tips.md)**: Final aşaması için teknik sunum ve jüri stratejileri.
+*   **[Business Strategy](docs/business_strategy.md)**: Startup dönüşüm planı.
 
 ---
 
