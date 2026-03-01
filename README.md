@@ -1,3 +1,5 @@
+![Project Banner](assets/teknofest_wireless_banner.png)
+
 # Wireless-Architect: Kablosuz Haberleşme ve RF Sistem Rehberi
 
 ![TEKNOFEST 2025](https://img.shields.io/badge/TEKNOFEST-2025-blue.svg)
